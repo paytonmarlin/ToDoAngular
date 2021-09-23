@@ -1,11 +1,11 @@
 <div class="container">
-  <form>
+  <form [formGroup]="todoForm" (ngSubmit)="addTodo()">
 
     <div class="form-group">
       <h1 class="text-center text-primary">ToDo App</h1>
       <div class="input-group-prepend">
         <!--Two way data binding that sends to typescript, then back to html-->
-        <input class="form-control" placeholder="Add Todo" name="todo" [(ngModel)]="todo">
+        <input class="form-control" placeholder="Add Todo" name="todo" formControlName="todo">
         <span class="input-group-text" (click)="addTodo()"><i class="material-icons">add</i></span>
       </div>
     </div>
