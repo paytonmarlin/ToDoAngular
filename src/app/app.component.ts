@@ -21,4 +21,13 @@ export class AppComponent {
       alert("Todo field required");
     }
   }
+
+  deleteItem(todo:string){
+    for(let i = 0; i < this.todoArray.length; i++){
+      if(todo == this.todoArray[i]){
+        console.log("deleted item: " + this.todoArray[i]);
+        this.todoArray.splice(i, 1);
+      }
+    }
+  }
 }

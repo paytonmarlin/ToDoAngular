@@ -6,14 +6,15 @@
       <div class="input-group-prepend">
         <!--Two way data binding that sends to typescript, then back to html-->
         <input class="form-control" placeholder="Add Todo" name="todo" [(ngModel)]="todo">
-        <span class="input-group-text" (click)="addTodo()"><i class="material-icons">add</i>Add</span>
+        <span class="input-group-text" (click)="addTodo()"><i class="material-icons">add</i></span>
       </div>
     </div>
-  </form>
-  <!--Display the typed message from user-->
+      <!--Display the typed message from user-->
   <div class="data">
     <ul class="list-unstyled">
-      <li *ngFor="let todo of todoArray">{{todo}}</li>
+      <li *ngFor="let todo of todoArray">{{todo}}<i class="material-icons" (click)="deleteItem(todo)">delete</i></li>
     </ul>
   </div>
+  </form>
+
 </div>
