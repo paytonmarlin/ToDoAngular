@@ -12,7 +12,7 @@
       <!--Display the typed message from user-->
   <div class="data">
     <ul class="list-unstyled">
-      <li *ngFor="let todo of todoArray">{{todo}}<i class="material-icons" (click)="deleteItem(todo)">delete</i></li>
+      <li [@moveInLeft] *ngFor="let todo of todoArray">{{todo}}<i class="material-icons" (click)="deleteItem(todo)">delete</i></li>
     </ul>
   </div>
   </form>
